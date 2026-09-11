@@ -110,7 +110,7 @@ Random Forest is a supervised Machine Learning algorithm that combines multiple 
 
 The disease detection system follows this process:
 
-```text
+
 User
   ↓
 Upload Leaf Image
@@ -279,7 +279,7 @@ Smart_Agriculture_Project/
 
 Note: Folder and file names may vary depending on the final project structure.
 
-⚙️ Installation and Setup
+## ⚙️ Installation and Setup
 Step 1: Clone the Repository
 git clone YOUR_GITHUB_REPOSITORY_URL
 Step 2: Open the Project
@@ -288,7 +288,7 @@ Step 3: Create Virtual Environment
 python -m venv venv
 Step 4: Activate Virtual Environment
 
-For Windows PowerShell:
+# For Windows PowerShell:
 
 .\venv\Scripts\Activate.ps1
 Step 5: Install Required Libraries
@@ -304,7 +304,7 @@ python manage.py migrate
 Step 7: Run the Development Server
 python manage.py runserver
 
-Open the application in your browser:
+# Open the application in your browser:
 
 http://127.0.0.1:8000/
 🔬 Machine Learning Workflow
@@ -431,7 +431,7 @@ SQLite
 Image Processing:
 OpenCV
 
-##🔮 Conclusion
+## 🔮 Conclusion
 
 Smart Agriculture Assistant is a web-based Machine Learning application designed to support farmers with important agricultural decisions.
 
@@ -440,3 +440,4 @@ The system combines crop recommendation, plant disease detection, smart farming 
 By using Python, Django, Random Forest, OpenCV, and SQLite, the project demonstrates how Machine Learning and web technologies can be applied to solve practical agricultural problems.
 
 The system can be further enhanced with real-time weather data, IoT devices, mobile applications, multilingual support, and advanced Machine Learning techniques.
+```text
