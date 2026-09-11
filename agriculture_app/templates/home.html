@@ -1,0 +1,368 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Agriculture Assistant</title>
+
+    <style>
+        .navbar{
+    background:rgb(8, 97, 8);
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:18px;
+}
+
+.navbar a:hover{
+    color:yellow;
+}
+.features{
+    display:flex;
+    justify-content:space-around;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.feature-card{
+    background:linear-gradient(135deg,#ffffff,#f0fff0);
+    width:300px;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    margin-bottom:25px;
+    transition:0.4s;
+    border:1px solid #dcdcdc;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.feature-card h2{
+    font-size:28px;
+    margin-bottom:15px;
+    color:green;
+}
+
+.feature-card p{
+    font-size:16px;
+    line-height:1.6;
+}
+
+.about-section{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    margin-bottom:40px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+.about-section h1::after{
+    content:'';
+    display:block;
+    width:120px;
+    height:4px;
+    background:green;
+    margin:15px auto;
+    border-radius:10px;
+}
+
+.about-section h1{
+    color:green;
+}
+
+.about-section p{
+    font-size:18px;
+    line-height:1.7;
+}
+        
+
+
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            background-color:#f4f4f4;
+        }
+
+        .hero{
+            background-image: url("{% static 'images/bg.jpg' %}");
+            background-size: cover;
+            background-position: center top;
+            height: 400px;
+            color: white;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+        }
+
+        .hero h1{
+            font-size:50px;
+            background:rgba(0,0,0,0.5);
+            padding:15px;
+            border-radius:10px;
+        }
+
+        .hero p{
+            font-size:20px;
+            background:rgba(0,0,0,0.5);
+            padding:10px;
+            border-radius:10px;
+        }
+
+        .container{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+            margin-top:40px;
+  
+        }
+
+        .card{
+            background:white;
+            padding:30px;
+            border-radius:20px;
+            margin-bottom:40px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    
+        }
+
+        h2{
+            color:rgb(19, 169, 19);
+        }
+        h3{
+            color: #e8ffe8;
+        }
+
+        input{
+           width:100%;
+        padding:12px;
+        margin-top:10px;
+        margin-bottom:18px;
+        border-radius:10px;
+        border:1px solid #ccc;
+        font-size:16px;
+        transition:0.3s;
+        box-sizing:border-box;
+        }
+        input:focus{
+    border-color:green;
+    outline:none;
+    box-shadow:0 0 8px rgba(0,128,0,0.3);
+}
+
+        button{
+            background:green;
+            color:white;
+            padding:12px 25px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:16px;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:darkgreen;
+            transform:scale(1.05);
+        }
+
+        .result{
+            background:#e8ffe8;
+            padding:20px;
+            border-radius:10px;
+            margin-top:20px;
+        }
+
+        .hero-btn{
+
+
+    width:auto;
+
+    padding:15px 35px;
+
+    margin-top:25px;
+
+    font-size:20px;
+
+    background:#0b8f2f;
+
+    color:white;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    display:block;
+
+margin:25px auto 0 auto;
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#066d22;
+}
+        .footer{
+    background:green;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <div class="navbar">
+
+    <h3 >🌿 Smart Agriculture</h3>
+
+    <div>
+
+    <a href="#"> 🏠Home</a>
+
+    <a href="/crop/">🌾Crop Recommendation</a>
+
+    <a href= "/disease/"> 🔬Disease Detection</a>
+
+    {% if user.is_authenticated %}
+
+        <span style="margin-left:20px;">
+            WELCOME, {{ user.username }}!!
+        </span>
+        <a href="/accounts/logout/">Logout</a>
+
+    {% else %}
+
+        <a href="/accounts/register/">Register</a>
+
+        <a href="/accounts/login/">Login</a>
+
+    {% endif %}
+
+</div>
+
+   </div>
+
+    <div class="hero">
+
+        <h1>Smart Agriculture Assistant 🌿</h1>
+
+        <p>
+            AI-Based Crop Recommendation and Disease Detection System
+        </p>
+
+    </div>
+    
+
+<div class="container">
+
+    <div class="about-section">
+
+        <h1>🌿 Welcome to Smart Agriculture Assistant</h1>
+
+        <p>
+            Smart Agriculture Assistant helps farmers make better farming decisions using Artificial Intelligence and Machine Learning technologies.
+        </p>
+
+        <p>
+            The system provides crop recommendations, plant disease detection, and smart farming guidance to improve productivity and reduce crop loss.
+        </p>
+
+    </div>
+
+    <div class="features">
+
+        <div class="feature-card">
+
+            <h2>🌾 Crop Recommendation</h2>
+
+            <p>
+                Predict the best crop based on soil nutrients and weather conditions.
+            </p>
+
+            <a href="/crop/">
+                <button>Open</button>
+            </a>
+
+        </div>
+
+        <div class="feature-card">
+
+            <h2>🌿 Disease Detection</h2>
+
+            <p>
+                Upload plant leaf images and detect diseases using AI technology.
+            </p>
+
+            <a href="/disease/">
+                <button>Open</button>
+            </a>
+
+        </div>
+
+        <div class="feature-card">
+
+    <h2>🌿 Smart Farming Guidance</h2>
+
+    <p>
+        Get smart farming advice, irrigation tips, and crop management guidance.
+    </p>
+
+    <a href="/guidance/" class="open-btn">
+      <button>  Open </button>
+    </a>
+
+</div>
+
+    </div>
+
+    <a href="/accounts/register/">
+
+    <button class="hero-btn">
+        Register Now
+    </button>
+
+</a>
+
+</div>
+
+    <div class="footer">
+
+    <h3>🌿 Smart Agriculture Assistant</h3>
+
+    <p>
+        AI-Based Crop Recommendation and Plant Disease Detection System
+    </p>
+
+    <p>
+        Developed using Django, Machine Learning and Image Processing
+    </p>
+
+</div>
+</body>
+</html>

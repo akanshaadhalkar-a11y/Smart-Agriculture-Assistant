@@ -1,0 +1,262 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+
+body{
+
+    background:#eef5ef !important;
+}
+
+.guidance-container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:50px auto;
+
+    padding:45px;
+
+    background:white;
+
+    border-radius:25px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.12);
+}
+
+.guidance-title{
+
+    text-align:center;
+
+    color:#14532d;
+
+    font-size:48px;
+
+    margin-bottom:15px;
+
+    font-weight:bold;
+}
+
+.guidance-subtitle{
+
+    text-align:center;
+
+    color:#555;
+
+    font-size:18px;
+
+    margin-bottom:45px;
+
+    line-height:1.8;
+}
+
+.guidance-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:28px;
+}
+
+.guidance-card{
+
+    background:#f7fff7;
+
+    border-left:6px solid #1d7c3b;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+}
+
+.guidance-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 8px 22px rgba(0,0,0,0.12);
+}
+
+.guidance-card h2{
+
+    color:#166534;
+
+    margin-bottom:18px;
+
+    font-size:28px;
+
+    text-align:left;
+}
+
+.guidance-card p{
+
+    color:#444;
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    text-align:justify;
+}
+
+.bottom-section{
+
+    margin-top:50px;
+
+    background:#f1fff1;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    border:2px solid #d6f5d6;
+}
+
+.bottom-section h2{
+
+    color:#166534;
+
+    margin-bottom:18px;
+}
+
+.bottom-section p{
+
+    color:#444;
+
+    line-height:1.9;
+
+    font-size:17px;
+
+    text-align:justify;
+}
+
+</style>
+
+
+<div class="guidance-container">
+
+    <h1 class="guidance-title">
+        🌿 Smart Farming Guidance
+    </h1>
+
+    <p class="guidance-subtitle">
+
+        Smart Agriculture Assistant provides modern farming guidance
+        using technology-based agricultural practices for improving
+        crop productivity, plant health, and sustainable farming.
+
+    </p>
+
+    <div class="guidance-grid">
+
+        <div class="guidance-card">
+
+            <h2>💧 Irrigation Management</h2>
+
+            <p>
+                Efficient irrigation management helps farmers reduce water
+                wastage and improve crop growth. Drip irrigation and sprinkler
+                systems provide better water distribution and support healthy
+                agricultural production.
+            </p>
+
+        </div>
+
+        <div class="guidance-card">
+
+            <h2>🌱 Soil Health Monitoring</h2>
+
+            <p>
+                Maintaining soil fertility is important for better crop yield.
+                Regular soil testing helps farmers understand nutrient levels,
+                pH balance, and soil conditions for proper cultivation.
+            </p>
+
+        </div>
+
+        <div class="guidance-card">
+
+            <h2>🧪 Fertilizer Management</h2>
+
+            <p>
+                Balanced fertilizer usage improves plant growth and agricultural
+                productivity. Excessive chemical fertilizers may damage soil
+                quality, so organic fertilizers and compost are recommended.
+            </p>
+
+        </div>
+
+        <div class="guidance-card">
+
+            <h2>🍃 Plant Disease Prevention</h2>
+
+            <p>
+                Early disease detection helps reduce crop damage and improve
+                plant health. Farmers should regularly monitor leaves and use
+                preventive measures to control plant diseases effectively.
+            </p>
+
+        </div>
+
+        <div class="guidance-card">
+
+            <h2>☀ Weather Monitoring</h2>
+
+            <p>
+                Weather conditions directly affect agricultural production.
+                Monitoring rainfall, humidity, and temperature helps farmers
+                make better decisions regarding irrigation and harvesting.
+            </p>
+
+        </div>
+
+        <div class="guidance-card">
+
+            <h2>🚜 Smart Agriculture Technology</h2>
+
+            <p>
+                Technologies such as Machine Learning, Artificial Intelligence,
+                IoT sensors, and image processing are transforming modern
+                agriculture and improving farming efficiency.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="bottom-section">
+
+        <h2>🌾 Importance of Smart Agriculture</h2>
+
+        <p>
+            Smart agriculture combines modern technologies with traditional
+            farming practices to improve productivity, reduce crop losses,
+            and support sustainable farming. The Smart Agriculture Assistant
+            system helps farmers make better agricultural decisions through
+            crop recommendation, disease detection, and farming guidance
+            using Machine Learning and image processing techniques.
+        </p>
+
+    </div>
+
+</div>
+<a href="/"
+class="back-btn"
+style="
+text-decoration:none;
+padding:12px 22px;
+background:white;
+color:green;
+border-radius:12px;
+font-weight:bold;
+">
+    ← Back to Home 🏠
+</a>
+
+{% endblock %}
